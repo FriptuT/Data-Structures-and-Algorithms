@@ -1,27 +1,26 @@
-// creati - afisati o lista
-// creati un subprogram care sterge prima componenta
+//creare-afisare-subprogrm pentru stergerea primei componente daca aceasta contine
+// val 0
 #include <iostream>
 using namespace std;
 
-struct nod
-{
+struct nod{
     int x;
-    nod* urm;
+    nod *urm;
 };
 
 nod *p,*u;
 
 void creare(nod* &p, nod* &u)
 {
+    nod* c;
     int n,i;
-    nod *c;
-    cout<<"Nr de componente:";cin>>n;
+    cout<<"nr de elemente:";cin>>n;
     c = new nod;
     cout<<"x=";cin>>c->x;
     c->urm = NULL;
     p = c;
     u = c;
-    
+
     for (int i = 1; i <= n-1; i++)
     {
         c = new nod;
@@ -32,34 +31,39 @@ void creare(nod* &p, nod* &u)
     }
 }
 
-void listare(nod* p)
+void listare(nod *p)
 {
     nod *c;
     if (p == 0)
     {
-        cout<<"Lista este vida";
+        cout<<"Lista e vida";
     }
     else
     {
         c = p;
-        while (c)
+        while (c)   
         {
             cout<<c->x<<" ";
-            c = c->urm;
+            c=c->urm;
         }
     }
 }
 
-void sterge_prima(nod* &p, nod* &u)
+void sterge_ultima0(nod* &p, nod* &u)
 {
     nod *s;
     s = p;
-    p = p->urm;
-    if (p == 0)
+    
+    if (s->x == 0)
     {
-        u = 0;
+        cout<<"Prima comp este 0 si va fi stearsa";
+        delete s;
     }
-    delete s;
+    else
+    {
+        cout<<"Prima comp este "<<s->x<<" si nu va fi stearsa";
+
+    }
 }
 
 int main()
@@ -69,9 +73,10 @@ int main()
     listare(p);
     cout<<endl;
 
-    sterge_prima(p,u);
+    sterge_ultima0(p,u);
+    cout<<endl;
 
-    cout<<"Lista dupa stergerea primei comp:"<<endl;
+    cout<<"lista dupa stergere:"<<endl;
     listare(p);
 
 
