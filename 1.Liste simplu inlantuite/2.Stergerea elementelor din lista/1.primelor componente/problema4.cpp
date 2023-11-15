@@ -58,14 +58,20 @@ void afisare(nod *p)
 
 void sterge_prima(nod *&p, nod *&u)
 {
-    nod* prim = p;
+    nod* s;
 
     if (p->urm->x == p->urm->urm->x)
     {
-        nod *deleteTemp = p;
+        cout<<"urmatoarele 2 sunt identice, iar prima va fi stearsa"<<endl;
+        s = p;
         p = p->urm;
-        delete deleteTemp;
+        delete s;
     }
+    else
+    {
+        cout<<"urmatoarele 2 nu sunt identice"<<endl;
+    }
+    
 }
 
 int main()
@@ -73,6 +79,7 @@ int main()
     creare(p, u);
     cout << "lista este:" << endl;
     afisare(p);
+    cout<<endl;
 
     sterge_prima(p, u);
 
