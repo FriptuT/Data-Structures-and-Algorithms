@@ -1,4 +1,4 @@
-// sterge comp care contin valori egale cu valoarea primei componente
+//sterge componentele care contin valori egale cu valoarea celei de a3-a componenta
 #include <iostream>
 using namespace std;
 
@@ -14,7 +14,7 @@ void creare(nod *&p, nod *&u)
 {
     int n, i;
     nod *c;
-    cout << "nr de elemente:";
+    cout << "nr de componente:";
     cin >> n;
     c = new nod;
     cout << "x=";
@@ -39,7 +39,7 @@ void afisare(nod *p)
     nod *c;
     if (p == 0)
     {
-        cout << "lista vida:" << endl;
+        cout << "lista este vida:" << endl;
     }
     else
     {
@@ -52,16 +52,16 @@ void afisare(nod *p)
     }
 }
 
-// sterge comp care contin valori egale cu valoarea primei componente
-void sterge_egale_cuPrima(nod *&p, nod *&u)
+//sterge componentele care contin valori egale cu valoarea celei de a3-a componenta
+void stergeEgaleCuTreia(nod *&p, nod *&u)
 {
-    nod *cs, *c, *s;
-    int val;
-    val = p->x;
+    nod *c, *s, *cs;
+    int val = p->urm->urm->x;
+
     while (p != 0 && p->x == val)
     {
         s = p;
-        p=p->urm;
+        p = p->urm;
         delete s;
     }
 
@@ -82,32 +82,28 @@ void sterge_egale_cuPrima(nod *&p, nod *&u)
                 {
                     u = cs;
                 }
-                c=c->urm;
+                c = c->urm;
                 delete s;
             }
             else
             {
                 cs = c;
-                c=c->urm;
+                c = c->urm;
             }
         }
-        
     }
-    
 }
-
 
 int main()
 {
-    creare(p, u);
-    cout << "lista este:" << endl;
+    creare(p,u);
+    cout<<"lista este:"<<endl;
     afisare(p);
-    cout << endl;
 
-    sterge_egale_cuPrima(p, u);
-    cout << endl;
+    stergeEgaleCuTreia(p,u);
+    cout<<endl;
 
-    cout << "afisare dupa stergere:" << endl;
+    cout<<"afisare dupa stergere:"<<endl;
     afisare(p);
 
     return 0;
