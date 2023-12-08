@@ -4,20 +4,21 @@
 using namespace std;
 
 char s[100],s2[100];
-int L1,L2,i,j;
+int L1,L2;
+
 
 int main()
 {
     cout<<"s:";cin.getline(s,100);
     cout<<"s2:";cin.getline(s2,100);
 
-    L1 = strlen(s);
-    L2 = strlen(s2);
+    L1=strlen(s);
+    L2=strlen(s2);
 
     // teodor
     //    dor
-    i = L1-1;
-    j = L2-1;
+    int i = L1-1;
+    int j = L2-1;
     while (i >= 0 && j >= 0 && s[i] == s2[j])
     {
         i--;
@@ -26,14 +27,14 @@ int main()
     
     for (int k = i+1; k <= L1-1; k++)
     {
-        for (int t = L1-1; t >= k; t--)
+        for (int t = k; t <= L1-1; t++)
         {
-            cout<<s[t];
+            cout<<s[t]<<" ";
         }
         cout<<endl;
     }
     
-    
+
 
     return 0;
 }
