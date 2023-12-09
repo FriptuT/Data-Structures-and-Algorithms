@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "m:/Data-Structures-and-Algorithms/2.Double Linked Lists/1.Accessing elements in the list/2.accesing elements from the whole list/section4/problem1",
-      "program": "m:/Data-Structures-and-Algorithms/2.Double Linked Lists/1.Accessing elements in the list/2.accesing elements from the whole list/section4/problem1/build/Debug/outDebug",
+      "cwd": "m:/Data-Structures-and-Algorithms/2.Double Linked Lists/1.Accessing elements in the list/2.accesing elements from the whole list/section4",
+      "program": "m:/Data-Structures-and-Algorithms/2.Double Linked Lists/1.Accessing elements in the list/2.accesing elements from the whole list/section4/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
