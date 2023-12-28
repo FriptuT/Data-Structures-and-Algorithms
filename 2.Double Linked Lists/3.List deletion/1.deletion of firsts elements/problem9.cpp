@@ -1,34 +1,33 @@
-// delete all elements from the begining of the list if their value is 0 (zero)
+// delete all elements from the begining of the list while their value is 
+// equal with the next one
 #include <iostream>
 using namespace std;
 
-struct nod
-{
+struct nod{
     nod *as;
     int x;
     nod *ad;
 };
 
-nod *p, *u;
+nod *p,*u;
+
 
 void create(nod *&p, nod *&u)
 {
-    int n, i;
+    int n,i;
     nod *c;
-    cout << "nr of elements:";cin>>n;
+    cout<<"nr of elements:";cin>>n;
     c = new nod;
-    cout << "x=";
-    cin >> c->x;
+    cout<<"x=";cin>>c->x;
     c->ad = NULL;
     c->as = NULL;
     p = c;
     u = c;
 
-    for (int i = 1; i <= n - 1; i++)
+    for (int i = 1; i <= n-1; i++)
     {
         c = new nod;
-        cout << "x=";
-        cin >> c->x;
+        cout<<"x=";cin>>c->x;
         c->ad = NULL;
         c->as = u;
         u->ad = c;
@@ -36,46 +35,49 @@ void create(nod *&p, nod *&u)
     }
 }
 
-void displayLR(nod *p)
-{
+void displayLR(nod *p){
     nod *c;
     if (p == 0)
     {
-        cout << "the list is vid" << endl;
+        cout<<"the list is vid:"<<endl;
     }
     else
     {
         c = p;
         while (c)
         {
-            cout << c->x << " ";
-            c = c->ad;
+            cout<<c->x<<" ";
+            c=c->ad;
         }
     }
 }
 
-void deleteIfZero(nod *&p, nod *&u)
-{
+void deleteIfEqual(nod *&p){
     nod *s;
 
-    while (p->x == 0)
+    while (p->x  == p->ad->x)
     {
         s = p;
-        p = p->ad;
+        p=p->ad;
         delete s;
     }
+    
 }
+
 
 int main()
 {
     create(p,u);
-    cout<<"the list is:"<<endl;
+    cout<<endl;
 
     displayLR(p);
     cout<<endl;
-    deleteIfZero(p,u);  
+
+    deleteIfEqual(p);
     cout<<endl;
+
     displayLR(p);
+
 
 
     return 0;
