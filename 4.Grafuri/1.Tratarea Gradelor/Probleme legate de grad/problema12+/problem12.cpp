@@ -26,32 +26,32 @@ int main()
         }
     }
 
-    for (int j = 1; j <= n; j++)
-    {
-        if (a[1][j] == 1)
-        {
-            b[1][j] = 0;
-            b[j][1] = 0;
-        }
-    }
+    // for (int j = 1; j <= n; j++)
+    // {
+    //     if (a[1][j] == 1)
+    //     {
+    //         b[1][j] = 0;
+    //         b[j][1] = 0;
+    //     }
+    // }
 
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     for (int j = 1; j <= n; j++)
+    //     {
+    //         cout<<b[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    int ok = 1;                     // pp ca B este partial pt A
     for (int i = 1; i <= n; i++)
     {
         for (int j = 1; j <= n; j++)
         {
-            cout<<b[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-
-    int ok = 0;
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= n; j++)
-        {
-            if (a[i][j] != b[i][j])
+            if (b[i][j] == 1 && a[i][j] == 0)
             {
-                ok = 1;
+                ok = 0;
             }
         }
     }
