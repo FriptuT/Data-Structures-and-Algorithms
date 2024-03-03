@@ -1,0 +1,4 @@
+Teodora a primit o tema la matematica. 
+Ea trebuie să raspundă la două întrebări:
+1) Câte numere naturale nenule , mai mici decat n, nu sunt divizibile nici cu c1, nici cu c2?
+2) Câte numere naturale nenule , mai mici decat n, nu sunt divizibile nici cu c1, nici cu c2, nici cu c3?

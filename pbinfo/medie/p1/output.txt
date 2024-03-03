@@ -1,0 +1,8 @@
+care sunt: 
+3
+2
+2
+
+cate sunt: 3
+numere: 3 2 2 
+pozitiile numerelor:1 4 9 77049708

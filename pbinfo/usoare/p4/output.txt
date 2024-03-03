@@ -1,0 +1,2 @@
+Maximul dintre resturi: 3
+Suma resturilor: 8
