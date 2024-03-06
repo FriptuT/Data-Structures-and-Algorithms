@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+// un nr este norocos daca patratul lui se poate scrie ca suma de nr consecutive
 
 bool esteNorocos(int n) {
     int square = n * n;

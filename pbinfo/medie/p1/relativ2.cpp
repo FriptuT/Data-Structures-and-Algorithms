@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// un numar este minim relativ atunci cand este mai mic decat toate numerele din stanga sa
+// primul numar este by default minim relativ
 
 int n,x[100];
 
