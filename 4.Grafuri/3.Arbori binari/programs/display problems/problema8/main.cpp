@@ -1,25 +1,23 @@
-// Nodurile care au doar descendentul drept
-// The nodes that have only the right descendent
+//leaves information
 #include <iostream>
 #include <fstream>
 using namespace std;
 
-int n, rad, st[100], dr[100], info[100];
+int n,rad,i,st[100],dr[100],info[100];
 
-void rightDesc(int rad)
-{
-    if (st[rad] == 0 && dr[rad] != 0)
+void display(int rad){
+    if (st[rad] == 0 && dr[rad] == 0)
     {
-        cout << rad << " ";
+        cout<<info[rad]<<" ";
     }
 
     if (st[rad] != 0)
     {
-        rightDesc(st[rad]);
+        display(st[rad]);
     }
     if (dr[rad] != 0)
     {
-        rightDesc(dr[rad]);
+        display(dr[rad]);
     }
 }
 
@@ -35,9 +33,8 @@ int main()
     }
     inFile.close();
 
-    rightDesc(rad);
 
-
+    display(rad);
 
 
     return 0;
