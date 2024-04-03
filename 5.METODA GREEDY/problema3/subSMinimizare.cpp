@@ -33,7 +33,7 @@ int main()
     {
         for (int j = i+1; j <= n; j++)
         {
-            if (x[i] < x[j])
+            if (x[i] > x[j])
             {
                 aux = x[i];
                 x[i] = x[j];
@@ -42,13 +42,13 @@ int main()
         }
     }
 
-    // sortare sir b prin interschimbare
+    // sortare sir b
     int temp;
     for (int i = 1; i <= m - 1; i++)
     {
         for (int j = i+1; j <= m; j++)
         {
-            if (a[i] < a[j])
+            if (a[i] > a[j])
             {
                 temp = a[i];
                 a[i] = a[j];
@@ -57,7 +57,7 @@ int main()
         }
     }
 
-    // calculam expresia E
+    // 
     int E = 0;
     for (int i = 1; i <= n; i++)
     {
