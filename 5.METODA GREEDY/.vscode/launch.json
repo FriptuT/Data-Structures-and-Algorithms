@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "m:/MEDITATIE/PREGATIRE-INFO/zALGORITMI/Data-Structures-and-Algorithms/pbinfo/medie/p7",
-      "program": "m:/MEDITATIE/PREGATIRE-INFO/zALGORITMI/Data-Structures-and-Algorithms/pbinfo/medie/p7/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
