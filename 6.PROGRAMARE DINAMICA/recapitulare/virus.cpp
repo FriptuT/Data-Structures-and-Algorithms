@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
+int n,a,b,c,i;
 
-
-int n, a,b,c,i;
 int main()
 {
-    cout<<"nr de secunde:";cin>>n;
+    cout<<"nr de secunde: ";cin>>n;
+
     a = 1;
     b = 1;
     c = 1;
@@ -19,8 +19,10 @@ int main()
     }
     
 
-    // cotu a b c ;
-    cout<<"a="<<a<<"; b="<<b<<"; c="<<c<<endl;
+    cout<<a<<" "<<b<<" "<<c;
 
-    return 0;   
+
+
+    
+    return 0;
 }
