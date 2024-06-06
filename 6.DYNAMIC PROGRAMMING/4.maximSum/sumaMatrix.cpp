@@ -39,7 +39,7 @@ int main()
     cout<<s[1][1];
 
 
-    // DE EXPLICAT INCA O DATA LA MEDITATIE
+    // DE EXPLICAT INCA O DATA LA MEDITATIEG
 
 
     return 0;
