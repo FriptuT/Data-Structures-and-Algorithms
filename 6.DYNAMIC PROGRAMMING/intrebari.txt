@@ -1,0 +1,10 @@
+problema 4.maximSum:
+    - se precizeaza ca plecarea incepe din varful matricii
+
+problema 6.Numarul de aparitii:
+    Afisati numarul de moduri in care se poate ajunge din coltul
+    (n,1)  in coltul (1,n)
+
+    - se pleaca de la ultima linie prima coloana
+    - sa se afle nr de moduri pana la prima linie ultimul element
+    ::: noi in problema plecam de la prima linie ult element :::
